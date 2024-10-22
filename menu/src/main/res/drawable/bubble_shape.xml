@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ffffff" /> <!-- Couleur de fond de la bulle -->
+    <corners
+        android:topLeftRadius="0dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="40dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#cccccc" /> <!-- Bordure facultative -->
+</shape>

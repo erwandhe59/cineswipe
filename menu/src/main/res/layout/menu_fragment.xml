@@ -1,0 +1,131 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a4cddc"
+    tools:context=".MenuFragment">
+
+    <!-- Bulle de conversation (Texte dynamique de bienvenue) -->
+    <TextView
+        android:id="@+id/bubbleTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bubble_shape"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="#000000"
+        android:elevation="2dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Sous Bulle de conversation Perspective 3D -->
+    <TextView
+        android:id="@+id/subBubbleTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bubble_shape_2"
+        android:gravity="center"
+        android:elevation="0dp"
+        app:layout_goneMarginTop="20dp"
+        android:padding="16dp"
+        android:layout_marginTop="7dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Header Text (Bienvenue) -->
+
+    <ImageView
+        android:id="@+id/trianglePointer"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:elevation="3dp"
+        android:layout_marginBottom="20dp"
+        android:rotation="90"
+        android:src="@drawable/triangle_shape"
+        app:layout_constraintBottom_toTopOf="@+id/featuredImageFrame"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Bienvenue, "
+        android:elevation="3dp"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- FrameLayout pour superposer l'image et le texte -->
+    <FrameLayout
+        android:id="@+id/featuredImageFrame"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText">
+
+        <!-- Arrière-plan arrondi -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background" />
+
+        <!-- Image de présentation avec coins arrondis -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/featuredImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/terrifier"
+            android:contentDescription="Nouveauté du mois"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance" />
+
+        <!-- Texte "Nouveauté du mois" en gros sur l'image -->
+        <TextView
+            android:id="@+id/featuredTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:padding="16dp"
+            android:text="Nouveauté\ndu mois ?"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- Liste de posters de films défilante horizontalement -->
+    <HorizontalScrollView
+        android:id="@+id/movieScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="12dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/featuredImageFrame">
+
+        <LinearLayout
+            android:id="@+id/movieContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" />
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

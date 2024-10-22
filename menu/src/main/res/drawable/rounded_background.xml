@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="56dp" /> <!-- Ajuste le radius selon le besoin -->
+    <solid android:color="#FFFFFF" /> <!-- Choisis la couleur d'arrière-plan -->
+</shape>

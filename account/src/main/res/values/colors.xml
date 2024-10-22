@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="textColor">#000000</color>
+    <color name="buttonColor">#FF6200EE</color>
+    <color name="googleColor">#DB4437</color>
+    <color name="facebookColor">#4267B2</color>
+
+        <!-- Couleur principale -->
+        <color name="colorPrimary">#FF6200EE</color>
+
+        <!-- Couleur principale foncée -->
+        <color name="colorPrimaryDark">#FF3700B3</color>
+
+        <!-- Couleur d'accentuation (facultative) -->
+        <color name="colorAccent">#FF03DAC5</color>
+
+</resources>
